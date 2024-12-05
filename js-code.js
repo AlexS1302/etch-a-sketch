@@ -31,8 +31,16 @@ function createSquares(container, gridSize) {
         for (let j= 0; j < gridSize; j++) {
             const square = document.createElement("div");
             square.classList.add("square");
+
             square.style.width = `${squareSize}px`;
             square.style.height = `${squareSize}px`;
+
+            const randomColor = getRandomRGBColor();
+            square.dataset.color = randomColor;
+
+            square.dataset.opacity = 0;
+            square.style.backgroundColor = `rgba(${randomColor.slice(4, -1)}, 0)`
+
             container.appendChild(square); 
         }
         
@@ -43,10 +51,27 @@ function createSquares(container, gridSize) {
 function addHoverEffect() {
     document.querySelectorAll(".square").forEach(square => {
         square.onmouseover = () => {
-            square.style.backgroundColor = "black";
+            
+            // Add opacity
+            let currentOpacity = parseFloat(square.dataset.opacity);
+            if (currentOpacity < 1.0) {
+                currentOpacity = Math.min(currentOpacity + 0.1, 1.0);
+                square.dataset.opacity = currentOpacity;
+                const rgbValues= square.dataset.color.slice(4, -1);
+                square.style.backgroundColor = `rgba(${rgbValues}, ${currentOpacity})`
+            }
         };
     });
 }
+
+// Change square color
+function getRandomRGBColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
 
 // Generate Grid
 function generateGrid() {
