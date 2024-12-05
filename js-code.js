@@ -73,7 +73,7 @@ function getRandomRGBColor() {
 }
 
 
-// Generate Grid
+// Generate grid
 function generateGrid() {
     const container = document.querySelector("#container");
     const gridSize = getGridSize();
