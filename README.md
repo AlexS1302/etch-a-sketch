@@ -14,7 +14,7 @@ Every time the grid is regenerated, the squares get a random RGB color.
 ## Technologies Used
 * HTML5
 * CSS3 (including Flexbox)
-* Javascript
+* JavaScript
 
 ## Project Link
 You can view this project [here](https://alexs1302.github.io/etch-a-sketch/)!
