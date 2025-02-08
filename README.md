@@ -1,7 +1,7 @@
 # Etch-a-Sketch
 
 ## Introduction
-Welcome to my Etch-a Sketch Project!  
+Welcome to my Etch-a Sketch project!  
 
 This project allows users to draw on a grid that can be dynamically generated up to a maximum of 100 squares. As you draw, each square becomes more opaque.  
 Every time the grid is regenerated, the squares get a random RGB color.
