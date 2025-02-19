@@ -20,4 +20,4 @@ Every time the grid is regenerated, the squares get a random RGB color.
 You can view this project [here](https://alexs1302.github.io/etch-a-sketch/)!
 
 ## Credits
-This Project was created as part of The Odin Project's curriculum, a free online resource for learning web development.
+This project was created as part of The Odin Project's curriculum, a free online resource for learning web development.
